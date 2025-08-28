@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         btnCadastrar.setOnClickListener{
             val titulo = edtNome.text.toString()
             val autor = edtAutor.text.toString()
-            livro    = Livro(titulo, autor)
+            livro = Livro(titulo, autor)
 
             //mensagem de confirmação do cadastro
             val builder = AlertDialog.Builder(this)
@@ -45,11 +45,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             edtAutor.text.clear()
     }
         //botao que leva pra outra tela
-        fabMostra.setOnClickListener{
+        fabMostra.setOnClickListener {
             val intent = Intent(this, LivroActivity::class.java)
-            intent.putExtra("livro", livro.toString())
+            intent.putExtra("livro", "Título do livro: ${livro.tituloLivro}\nNome do autor: ${livro.nomeAutor}")
             startActivity(intent)
         }
+
 
 
     }

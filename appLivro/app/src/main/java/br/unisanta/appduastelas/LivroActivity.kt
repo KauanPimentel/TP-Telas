@@ -22,7 +22,7 @@ class LivroActivity : AppCompatActivity(R.layout.activity_livro) {
         val fabVoltar = findViewById<FloatingActionButton>(R.id.fab_voltar)
         val livro = intent.getStringExtra("livro")
 
-        edtTitulo.text = "Título do Livro: $livro"
+        edtTitulo.text = "$livro"
 
         fabVoltar.setOnClickListener{
             finish()
